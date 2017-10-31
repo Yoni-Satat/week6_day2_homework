@@ -24,7 +24,7 @@ public class DirectorTest {
     @Test
     public void canSetDirectorName() {
         director.setName("Susan");
-        assertEquals("Susan", director.getName());
+        assertEquals(true, director.getName());
     }
 
     @Test
