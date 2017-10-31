@@ -21,8 +21,13 @@ public class Employee {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public boolean getName() {
+        if (name == null){
+            return false;
+        } else if (name == ""){
+            return false;
+        }
+        return true;
     }
 
     public void setName(String name) {

@@ -21,7 +21,7 @@ public class EmployeeTest {
 
     @Test
     public void canGetEmployeeName() {
-        assertEquals("Wilma", employee.getName());
+        assertEquals(true, employee.getName());
     }
 
     @Test
@@ -32,7 +32,19 @@ public class EmployeeTest {
     @Test
     public void canSetEmployeeName() {
         employee.setName("Betty");
-        assertEquals("Betty", employee.getName());
+        assertEquals(true, employee.getName());
+    }
+
+    @Test
+    public void canSetEmployeeNameIfNull() {
+        employee.setName(null);
+        assertEquals(false, employee.getName());
+    }
+
+    @Test
+    public void canSetEmployeeNameIfEmptyString() {
+        employee.setName("");
+        assertEquals(false, employee.getName());
     }
 
     @Test
