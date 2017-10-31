@@ -6,10 +6,12 @@ import static org.junit.Assert.*;
 
 public class EmployeeTest {
     Employee employee;
+    Manager manager;
 
     @Before
     public void before() {
-        employee = new Employee(1, "Wilma", "AB123456C", 30000.00 );
+        employee = new Employee(1, "Fred", "AB123456C", 30000.00 );
+        manager = new Manager(2, "Wilma", "AB123456D", 60000.00, "Marketing");
     }
 
     @Test
@@ -37,5 +39,10 @@ public class EmployeeTest {
     public void canRaiseSalary() {
         employee.raiseSalary(5000.00);
         assertEquals(35000.00, employee.getSalary(), 0.01);
+    }
+
+    @Test
+    public void getDeptName() {
+        assertEquals("Marketing", manager.getDeptName());
     }
 }
