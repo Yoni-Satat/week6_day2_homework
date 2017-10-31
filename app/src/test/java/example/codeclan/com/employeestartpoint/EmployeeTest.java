@@ -28,26 +28,14 @@ public class EmployeeTest {
     }
 
     @Test
-    public void canSetEmployeeId() {
-        employee.setId(99);
-        assertEquals(99, employee.getId());
-    }
-
-    @Test
     public void canSetEmployeeName() {
         employee.setName("Betty");
         assertEquals("Betty", employee.getName());
     }
 
     @Test
-    public void canSetEmployeeSsn() {
-        employee.setSocialSecurityNumber("XY987654Z");
-        assertEquals("XY987654Z", employee.getSocialSecurityNumber());
-    }
-
-    @Test
-    public void canSetEmployeeSalary() {
-        employee.setSalary(40000.00);
-        assertEquals(40000.00, employee.getSalary(), 0.01);
+    public void canRaiseSalary() {
+        employee.raiseSalary(5000.00);
+        assertEquals(35000.00, employee.getSalary(), 0.01);
     }
 }

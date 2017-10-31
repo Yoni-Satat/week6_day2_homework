@@ -29,9 +29,15 @@ public class Employee {
         this.name = name;
     }
 
-
-
     public String getSocialSecurityNumber() {
         return socialSecurityNumber;
+    }
+
+    public void raiseSalary(double raise) {
+        this.salary += raise;
+    }
+
+    public double getSalary() {
+        return salary;
     }
 }
