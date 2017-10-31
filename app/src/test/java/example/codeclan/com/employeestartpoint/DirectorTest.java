@@ -20,4 +20,16 @@ public class DirectorTest {
     public void canGetBudget() {
         assertEquals(150000.00, director.getBudget(), 0.01);
     }
+
+    @Test
+    public void canSetDirectorName() {
+        director.setName("Susan");
+        assertEquals("Susan", director.getName());
+    }
+
+    @Test
+    public void canGetDirectorSalary() {
+        director.getSalary();
+        assertEquals(30000.00, director.getSalary(), 0.01);
+    }
 }
